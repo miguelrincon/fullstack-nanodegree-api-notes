@@ -12,7 +12,6 @@ Base = declarative_base()
 chars = string.ascii_uppercase + string.digits
 secret_key = ''.join(random.choice(chars) for x in range(32))
 
-#ADD YOUR USER MODEL HERE
 class User(Base):
     __tablename__ = 'user'
     id = Column(Integer, primary_key=True)
